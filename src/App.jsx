@@ -26,7 +26,8 @@ function App() {
         <p>this is container paragraph</p>
       </Container> */}
       {/* <Ludoboard /> */}
-      <Todolist />
+      {/* <Todolist /> */}
+      <Ludoboard></Ludoboard>
     </div>
   );
 }
