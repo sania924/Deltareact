@@ -15,6 +15,45 @@ export default function Ludoboard() {
     });
     console.log(arr);
   };
+  let updateYellow = () => {
+    //function for update value
+    console.log(`moves.yellow=${Move.yellow}`);
+    setMove((preMoves) => {
+      //use call back bcz new value depend on previous value
+      return { ...preMoves, yellow: preMoves.yellow + 1 };
+    });
+
+    SetArr((preArr) => {
+      return [...preArr, "yellow moves"];
+    });
+    console.log(arr);
+  };
+  let updategreen = () => {
+    //function for update value
+    console.log(`moves.green=${Move.green}`);
+    setMove((preMoves) => {
+      //use call back bcz new value depend on previous value
+      return { ...preMoves, green: preMoves.green + 1 };
+    });
+
+    SetArr((preArr) => {
+      return [...preArr, "green moves"];
+    });
+    console.log(arr);
+  };
+  let updatered = () => {
+    //function for update value
+    console.log(`moves.red=${Move.red}`);
+    setMove((preMoves) => {
+      //use call back bcz new value depend on previous value
+      return { ...preMoves, red: preMoves.red + 1 };
+    });
+
+    SetArr((preArr) => {
+      return [...preArr, "red moves"];
+    });
+    console.log(arr);
+  };
   return (
     <>
       <h3>Ludo game begin</h3>
@@ -26,11 +65,17 @@ export default function Ludoboard() {
           +1
         </button>
         <p>Yellow moves = {Move.yellow}</p>
-        <button style={{ backgroundColor: "yellow" }}>+1</button>
+        <button style={{ backgroundColor: "yellow" }} onClick={updateYellow}>
+          +1
+        </button>
         <p>Green moves ={Move.green} </p>
-        <button style={{ backgroundColor: "green" }}>+1</button>
+        <button style={{ backgroundColor: "green" }} onClick={updategreen}>
+          +1
+        </button>
         <p>Red moves ={Move.red} </p>
-        <button style={{ backgroundColor: "red" }}>+1</button>
+        <button style={{ backgroundColor: "red" }} onClick={updatered}>
+          +1
+        </button>
       </center>
     </>
   );
